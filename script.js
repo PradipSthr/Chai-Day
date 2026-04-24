@@ -11,7 +11,7 @@ const gifStages = [
 
 const noMessages = [
     "No",
-    "Are Chanlna? 🤔",
+    "Aree.. Chalna? 🤔",
     "Pookie please... 🥺",
     "Gussa aa jayega...",
     "I will be very sad... 😢",
