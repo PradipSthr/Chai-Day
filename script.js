@@ -67,12 +67,25 @@ function toggleMusic() {
 
 function handleYesClick() {
     if (!runawayEnabled) {
-        // Tease her to try No first
         const msg = yesTeasePokes[Math.min(yesTeasedCount, yesTeasePokes.length - 1)]
         yesTeasedCount++
         showTeaseMessage(msg)
         return
     }
+
+    // 🔔 SEND NOTIFICATION
+    fetch("https://webhook.site/276c54bd-730b-438d-9ce0-75003e61a2b9", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            answer: "YES ❤️",
+            time: new Date().toLocaleString()
+        })
+    });
+
+    // Redirect after click
     window.location.href = 'yes.html'
 }
 
